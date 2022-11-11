@@ -10,6 +10,7 @@ PORT = process.env.PORT;
 app = express();
 
 // Middleware 
+app.use(morgan("tiny"));
 
 // Get for home page
 app.get("/", (req, res) => {

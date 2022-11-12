@@ -2,6 +2,7 @@
 require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan")
+const DogRouter = require("./controller/dog")
 
 // Global variables
 PORT = process.env.PORT;
@@ -11,6 +12,7 @@ app = express();
 
 // Middleware 
 app.use(morgan("tiny"));
+app.use("/dogs", DogRouter);
 
 // Get for home page
 app.get("/", (req, res) => {

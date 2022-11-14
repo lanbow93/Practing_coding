@@ -2,6 +2,7 @@
 require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
+const SystemRouter = require("./controllers/gamesystem")
 
 // Global Variables
 const PORT = process.env.PORT
@@ -11,6 +12,7 @@ const app = express();
 
 // Middleware
 app.use(morgan("tiny"))
+app.use("/systems", SystemRouter)
 
 // Creating home route
 

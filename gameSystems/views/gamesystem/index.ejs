@@ -1,7 +1,9 @@
+<%- include("./partials/head.ejs") %>
+
 <h1>List of Game Systems</h1>
 
 <ul>
-    <% Systems.data.forEach((system) => { %>
-        <li><%= system.name %></li>
+    <% Systems.forEach((system) => { %>
+        <li><a href="/systems/<%= Systems.indexOf(system)%>"><%= system.name %></a></li>
     <% }) %>
 </ul>

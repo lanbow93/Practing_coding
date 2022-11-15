@@ -13,6 +13,7 @@ const app = express();
 // Middleware
 app.use(morgan("tiny"))
 app.use("/systems", SystemRouter)
+app.use("/static", express.static("public"))
 
 // Creating home route
 

@@ -13,6 +13,7 @@ app = express();
 // Middleware 
 app.use(morgan("tiny"));
 app.use("/dogs", DogRouter);
+app.use("/static", express.static("public"))
 
 // Get for home page
 app.get("/", (req, res) => {

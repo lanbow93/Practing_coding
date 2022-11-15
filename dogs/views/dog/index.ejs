@@ -1,7 +1,9 @@
+<%- include("./partials/head.ejs") %>
+
 <h1>List of Dogs</h1>
 
 <ul>
     <% dogs.forEach((dog) => { %>
-        <li><%= dog.breed %></li>
+        <li><a href="/dogs/<%= dogs.indexOf(dog) %>"><%= dog.breed %></a></li>
     <% }) %>
 </ul>

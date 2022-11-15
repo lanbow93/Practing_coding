@@ -9,4 +9,10 @@ router.get("/", (req, res) => {
     })
 })
 
+router.get("/:id", (req, res) => {
+    res.render("dog/show.ejs", {
+        dog: Dog.getOne(req.params.id)
+    })
+})
+
 module.exports = router

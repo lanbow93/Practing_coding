@@ -14,6 +14,13 @@ router.get("/", (req, res) => {
     })
 });
 
+// Show Route /soda/:id -> page on an indivisual route
+router.get("/:id", (req, res) => {
+    res.render("soda/show.ejs", {
+        soda: Soda.getOne(req.params.id)
+    })
+})
+
 
 // Export the router
 module.exports = router;

@@ -13,6 +13,7 @@ const app = express();
 // Middleware
 app.use(morgan("tiny"))
 app.use("/soda", SodaRouter)
+app.use("/static", express.static("public"))
 
 // Routes
 app.get('/', (req, res) => {

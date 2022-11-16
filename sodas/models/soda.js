@@ -8,6 +8,12 @@ const Soda = {
     },
     getOne: function(index){
         return this.data[index]
+    },
+    create: function(newSoda) {
+        this.data.push(newSoda)
+    },
+    update: function(index, updates) {
+        this.data[index] = updates
     }
 }
 

@@ -1,5 +1,10 @@
 <h1><%= soda.name %></h1>
 <h2>COLOR: <%= soda.color %></h2>
 <h3>READY TO SELL: <%= soda.readyToSell ? "Yes" : "No" %></h3>
+
+<form action="/soda/<%= soda._id %>?_method=DELETE" method="post">
+    <input type="submit" value="delete">
+</form>
+
 <h4><a href="/soda">BACK TO MAIN PAGE</a></h4>
 

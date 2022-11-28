@@ -34,6 +34,10 @@ router.get("/new",  (req, res) => {
 })
 
 // Destroy Route - Delete Deleted One Soda
+router.delete("/:id", async (req, res) => {
+    await Soda.findByIdAndRemove(req.params.id).catch((error => errorHandler(error, res)))
+    res.redirect("/soda")
+})
 
 // Update Route - Put - Updates One Soda
 
